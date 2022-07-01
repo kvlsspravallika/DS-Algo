@@ -79,6 +79,12 @@ public class PrintAllPermutations {
         return result;
     }
 
+    /*
+    Time Complexity: O(N! X N)
+
+    Space Complexity: O(1)
+
+     */
     private static void permuteRecursion2(int[] arr, List<List<Integer>> result, int index){
         if(index==arr.length){
             List<Integer> list = new ArrayList<>();
