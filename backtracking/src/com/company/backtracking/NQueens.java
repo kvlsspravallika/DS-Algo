@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/*
+Problem Statement: The n-queens is the problem of placing n queens on n × n chessboard such that
+no two queens can attack each other. Given an integer n, return all distinct solutions to the n -queens puzzle.
+Each solution contains a distinct boards configuration of the queen’s placement, where ‘Q’ and ‘.’ indicate queen
+and empty space respectively.
+
+Input: n = 4
+
+Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
+
+
+ */
 public class NQueens {
     public static void main(String[] args) {
         System.out.println(nQueens(4));
@@ -12,6 +24,12 @@ public class NQueens {
         System.out.println(nQueens2(8));
     }
 
+    /*
+    Time Complexity: Exponential in nature since we are trying out all ways, to be precise its O(N! * N).
+
+    Space Complexity: O( N2 )
+
+     */
     private static List<List<String>> nQueens(int n){
         char[][] board = new char[n][n];
         for(int i=0;i< board.length;i++){
@@ -77,6 +95,12 @@ public class NQueens {
     }
 
 
+    /*
+    Time Complexity: Exponential in nature since we are trying out all ways, to be precise its O(N! * N).
+
+    Space Complexity: O(N)
+
+     */
     private static List<List<String>> nQueens2(int n){
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++)
